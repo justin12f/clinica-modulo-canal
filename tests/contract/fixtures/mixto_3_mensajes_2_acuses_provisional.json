@@ -1,0 +1,91 @@
+{
+  "_note": "PROVISIONAL (Tarea 1.5). Ver mensaje_texto_provisional.json para la nota completa sobre procedencia y reemplazo en la Tarea 1.10. Este es el fixture del hallazgo F12: un solo payload de Meta trae N mensajes y M acuses a la vez en el mismo entry[].changes[].value -- messages[] y statuses[] son arreglos hermanos, no mutuamente excluyentes. El traductor debe separarlos en .messages y .statuses.",
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "102934680123456",
+      "changes": [
+        {
+          "field": "messages",
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "16505553333",
+              "phone_number_id": "277011111111111"
+            },
+            "contacts": [
+              {
+                "profile": { "name": "Ana Lopez" },
+                "wa_id": "5214793066911"
+              }
+            ],
+            "messages": [
+              {
+                "from": "5214793066911",
+                "id": "wamid.mixto_msg_0001",
+                "timestamp": "1738000100",
+                "type": "text",
+                "text": { "body": "Se me movio la cita?" }
+              },
+              {
+                "from": "5214793066911",
+                "id": "wamid.mixto_msg_0002",
+                "timestamp": "1738000105",
+                "type": "image",
+                "image": {
+                  "id": "2754859441498129",
+                  "mime_type": "image/jpeg",
+                  "sha256": "9c1e2b7d8f6a9c0e1b2d3f4a5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d"
+                }
+              },
+              {
+                "from": "5214793066911",
+                "id": "wamid.mixto_msg_0003",
+                "timestamp": "1738000110",
+                "type": "interactive",
+                "interactive": {
+                  "type": "list_reply",
+                  "list_reply": {
+                    "id": "reagendar_manana",
+                    "title": "Reagendar a manana",
+                    "description": "10:00 am con Dr. Ruiz"
+                  }
+                }
+              }
+            ],
+            "statuses": [
+              {
+                "id": "wamid.mixto_saliente_0001",
+                "recipient_id": "5214793066911",
+                "status": "delivered",
+                "timestamp": "1738000115",
+                "conversation": {
+                  "id": "conv_abc123",
+                  "expiration_timestamp": "1738086515"
+                },
+                "pricing": {
+                  "pricing_model": "CBP",
+                  "billable": true,
+                  "category": "utility"
+                }
+              },
+              {
+                "id": "wamid.mixto_saliente_0002",
+                "recipient_id": "5214793066911",
+                "status": "failed",
+                "timestamp": "1738000120",
+                "errors": [
+                  {
+                    "code": 131047,
+                    "title": "Re-engagement message",
+                    "message": "Fuera de la ventana de 24h, hace falta plantilla"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

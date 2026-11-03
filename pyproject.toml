@@ -1,0 +1,30 @@
+[project]
+name = "clinica-modulo-canal"
+version = "0.1.0"
+description = "Primer módulo (M1 · Canal) del agente de WhatsApp para clínicas: recepción de webhooks de Meta."
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.7,<3",
+    "phonenumbers>=8.13",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2",
+    "ruff==0.16.6",
+    "mypy==2.3.1",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+files = ["app"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

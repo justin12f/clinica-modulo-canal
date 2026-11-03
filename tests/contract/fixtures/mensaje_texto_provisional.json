@@ -1,0 +1,36 @@
+{
+  "_note": "PROVISIONAL (Tarea 1.5). No es una captura real de H0 -- la cuenta de Meta no existe todavia. Construido a partir de la forma documentada por Meta Cloud API para webhooks de WhatsApp (confirmada via Context7 /dogalyir/whatsapp-cloud-api-types, que a su vez sigue developers.facebook.com/docs/whatsapp/cloud-api/webhooks). Se reemplaza por una captura real en la Tarea 1.10; hasta entonces esta prueba de contrato verifica coherencia interna, no fidelidad al formato real.",
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "102934680123456",
+      "changes": [
+        {
+          "field": "messages",
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "16505553333",
+              "phone_number_id": "277011111111111"
+            },
+            "contacts": [
+              {
+                "profile": { "name": "Ana Lopez" },
+                "wa_id": "5214793066911"
+              }
+            ],
+            "messages": [
+              {
+                "from": "5214793066911",
+                "id": "wamid.texto_0001",
+                "timestamp": "1738000000",
+                "type": "text",
+                "text": { "body": "Hola, quiero confirmar mi cita" }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

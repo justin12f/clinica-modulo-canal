@@ -1,0 +1,9 @@
+# Paso 3 · Implementación
+
+| Elemento | Registro |
+|---|---|
+| Archivos efectivamente creados o modificados | **Copiados sin cambios funcionales**: `app/channel/_internal/meta/signature.py` (solo se ordenó `__all__` por `ruff` RUF022), `app/channel/_internal/meta/translator.py`, `app/core/types.py`. **Recortado**: `app/core/errors.py`. **Nuevos**: `app/channel/__init__.py`, `tests/unit/test_firma_casos_practica.py`, `pyproject.toml`, `.gitignore`, `README.md`, `docs/practica/*`. **Pruebas copiadas**: `tests/unit/test_phone.py`, `tests/unit/test_firma_meta_secreto_vacio.py`, `tests/contract/test_payloads_meta.py` y `tests/contract/fixtures/*.json`. |
+| Funciones / clases implementadas | `sign_body(body, app_secret) -> str`: produce la cabecera como la manda Meta. `verify_signature(body, header, app_secret) -> bool`: HMAC-SHA256 del cuerpo crudo, comparado con `hmac.compare_digest`. `to_domain(payload) -> ParsedWebhook`: recorre `entry[].changes[].value` y separa mensajes y acuses. Modelos inmutables de Pydantic: `InboundMessage`, `StatusUpdate`, `ParsedWebhook`. `PhoneNumber.parse(raw, default_region="MX")`: quita los prefijos 044/045/01, normaliza a E.164 y aplica la regla del `1` mexicano por longitud. `InvalidMetaPayload(reason)`. |
+| Validaciones incorporadas | Secreto vacío, cabecera ausente o sin prefijo. Estructura obligatoria del payload y tipos de mensaje admitidos (`text`, `image`, `document`, `audio`, `interactive`). Estados de acuse conocidos (`sent`, `delivered`, `read`, `failed`). Timestamp numérico. Patrón E.164 y longitud. |
+| Mensajes de error o retorno | `False` en la firma, sin excepción y sin filtrar el motivo. `InvalidMetaPayload("falta 'entry[].changes'")` y similares: solo describen el campo, nunca el contenido (invariante 11). `ValueError` en teléfonos. |
+| Cambios que el equipo decidió revertir o ajustar | [Completar por el equipo] |

@@ -1,0 +1,41 @@
+{
+  "_note": "PROVISIONAL (Tarea 1.5). Ver mensaje_texto_provisional.json para la nota completa sobre procedencia y reemplazo en la Tarea 1.10.",
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "102934680123456",
+      "changes": [
+        {
+          "field": "messages",
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "16505553333",
+              "phone_number_id": "277011111111111"
+            },
+            "contacts": [
+              {
+                "profile": { "name": "Ana Lopez" },
+                "wa_id": "5214793066911"
+              }
+            ],
+            "messages": [
+              {
+                "from": "5214793066911",
+                "id": "wamid.imagen_0001",
+                "timestamp": "1738000010",
+                "type": "image",
+                "image": {
+                  "id": "2754859441498128",
+                  "mime_type": "image/jpeg",
+                  "sha256": "81d3bd8a8db4868c9520ed47186e8b7c5789e61ff79f7f834be6950b808a90d",
+                  "caption": "asi se ve la hinchazon"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
