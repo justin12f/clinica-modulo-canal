@@ -9,5 +9,5 @@
 
 | Propuesta del asistente | Decisión del equipo | Justificación |
 |---|---|---|
-| Extraer solo firma, traductor e identidad telefónica (no la escritura en `inbound_event`) | [Aceptada / modificada / rechazada] | [Completar]. Motivo técnico: `inbox.py`, `ingest.py`, `window.py` y `planner.py` requieren PostgreSQL con RLS y no se pueden probar aislados. |
-| Agregar `test_firma_casos_practica.py` con casos normal, límite y error | [Aceptada / modificada / rechazada] | [Completar]. Motivo: la práctica exige los tres tipos de caso por CA, y la firma solo tenía dos pruebas sueltas. |
+| Extraer solo firma, traductor e identidad telefónica (no la escritura en `inbound_event`) | **Aceptada** | Mantiene el alcance acotado que pide la práctica y permite probar el módulo de forma aislada. Motivo técnico: `inbox.py`, `ingest.py`, `window.py` y `planner.py` requieren PostgreSQL con RLS y no se pueden probar aislados. |
+| Agregar `test_firma_casos_practica.py` con casos normal, límite y error | **Aceptada** | Cubre CA-1.4 con evidencia propia. Motivo: la práctica exige los tres tipos de caso por CA, y la firma solo tenía dos pruebas sueltas. |

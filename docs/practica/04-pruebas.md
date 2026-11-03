@@ -19,6 +19,6 @@ Las pruebas se **ejecutaron**. La salida completa está en [`evidencia/pytest-sa
 | Comando o forma de ejecución | `.venv/bin/python -m pytest -v`. Además `ruff check app tests`, `ruff format --check app tests` y `mypy` (estricto). |
 | Salida observada | `50 passed in 0.15s` (Python 3.13.18, pytest 9.2.0). `ruff`: sin errores, 13 archivos formateados. `mypy`: `Success: no issues found in 9 source files`. |
 | Error y corrección realizada (si aplica) | `ruff` reportó `RUF022` (`__all__` sin ordenar) en `signature.py`. Se corrigió con `ruff check --fix` sin cambiar la lógica. |
-| Funciones o partes que cada integrante puede explicar | [Completar por el equipo] |
+| Funciones o partes que cada integrante puede explicar | **Justin Emiliano Rodríguez Franco**: `verify_signature` / `sign_body` (HMAC sobre el cuerpo crudo, `compare_digest`, rechazo con secreto vacío) y `to_domain` (recorrido de `entry[].changes[].value`, separación de mensajes y acuses, `InvalidMetaPayload`). **Santiago Solís**: `PhoneNumber.parse` (prefijos 044/045/01, regla del `1` mexicano por longitud, `ValueError`) y la organización de las pruebas normal, límite y error. |
 
 **Pendiente:** contrastar los fixtures provisionales y la forma del `wa_id` con payloads reales de Meta (Tarea 1.10, bloqueada por H0).

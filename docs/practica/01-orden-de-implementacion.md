@@ -42,4 +42,6 @@ Sí. El módulo hace lo que el diseño asigna a la recepción del canal y nada m
 - Los fixtures de Meta son *provisionales*: no son capturas reales, porque H0 sigue pendiente.
 - La forma exacta del `wa_id` real (Tarea 1.3, paso 5) está por confirmar contra Meta.
 
-**Decisión del equipo sobre la orden:** [aceptada / modificada / rechazada] — justificación: [Completar por el equipo].
+**Equipo:** Justin Emiliano Rodríguez Franco y Santiago Solís.
+
+**Decisión del equipo sobre la orden:** **aceptada**. Justificación: la orden se limita a un módulo del primer incremento y respeta las fronteras del diseño (`_internal` privado, interfaz pública en `__init__.py`). Además, cada pieza tiene criterios de aceptación ya escritos en `13-plan-v2.md` que se pueden comprobar sin infraestructura. Las dos ambigüedades (fixtures provisionales y forma del `wa_id`) no bloquean esta entrega y quedan registradas como pendientes.

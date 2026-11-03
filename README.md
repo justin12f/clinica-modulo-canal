@@ -1,5 +1,7 @@
 # clinica-modulo-canal
 
+**Equipo:** Justin Emiliano Rodríguez Franco y Santiago Solís.
+
 Primer módulo del **agente de WhatsApp para clínicas** (`justin12f/clinic-managment-agent`), extraído como
 entrega de la práctica *DASV · Implementación del primer módulo*.
 
